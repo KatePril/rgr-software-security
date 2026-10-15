@@ -1,0 +1,21 @@
+{
+  "name": "tls_handshake_sim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RGR: simulated TLS/SSL handshake over a constrained, partially-connected mesh network",
+  "scripts": {
+    "ca-server": "node src/ca-server.js",
+    "demo:handshake": "node demo/01-handshake.js",
+    "demo:mesh-routing": "node demo/02-mesh-routing.js",
+    "demo:one-to-all": "node demo/03-broadcast.js",
+    "demo:file-transfer": "node demo/04-file-transfer.js",
+    "demo:all": "npm run demo:handshake && npm run demo:mesh-routing && npm run demo:one-to-all && npm run demo:file-transfer"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-forge": "^1.3.1"
+  }
+}
